@@ -1,0 +1,336 @@
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* bodytype (mobile first: one column) */
+body {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #111111;
+  background-color: #f3efc3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+/* type */
+header {
+  grid-area: header;
+  padding: 48px 20px;
+  background-color: #f3efc3;
+}
+
+nav {
+  grid-area: nav;
+  padding: 14px 20px;
+  background-color: #f3efc3;
+  border-top: 1px solid #c9c59f;
+  border-bottom: 1px solid #c9c59f;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  padding: 24px 20px;
+  background-color: #f3efc3;
+  border-top: 1px solid #c9c59f;
+}
+
+/* headers */
+h1, h2, h3 {
+  font-family: serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+header h1 {
+  font-size: 3.25rem;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+header p {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #4a463a;
+}
+
+main h2 {
+  font-size: 3rem;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+main h3 {
+  font-size: 1.9rem;
+  line-height: 1;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1.15rem;
+  max-width: 62ch;
+  margin-bottom: 14px;
+}
+
+/* navlinks */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 28px;
+}
+
+nav a {
+  color: #111111;
+  text-decoration: none;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* links */
+a {
+  color: #111111;
+  text-underline-offset: 4px;
+}
+
+a:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 4px;
+}
+
+/* sections */
+section {
+  padding: 48px 20px 56px;
+  border-bottom: 1px solid #c9c59f;
+}
+
+#about,
+#choosing {
+  background-color: #faf7e4;
+}
+
+#programs {
+  background-color: #f3efc3;
+}
+
+/* program sections match their program color */
+#photoshop {
+  background-color: #b3c0d6;
+}
+
+#illustrator {
+  background-color: #f0b283;
+}
+
+#indesign {
+  background-color: #dd8f86;
+}
+
+/* lists */
+main ol {
+  padding-left: 22px;
+  margin-bottom: 14px;
+}
+
+main li {
+  margin-bottom: 6px;
+}
+
+/* screenshots */
+.screenshot {
+  margin-top: 32px;
+}
+
+.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #c9c59f;
+}
+
+.screenshot figcaption {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* card row (flexbox, stacked on mobile) */
+.card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.card-row + p {
+  margin-top: 32px;
+}
+
+/* cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c9c59f;
+  padding: 24px 20px 26px;
+}
+
+.card img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.card a {
+  margin-top: auto;
+}
+
+/* three icons side by side */
+.icon-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.icon-row img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 0;
+}
+
+/* card colors */
+.card:nth-child(1) {
+  background-color: #b3c0d6;
+}
+
+.card:nth-child(2) {
+  background-color: #f0b283;
+}
+
+.card:nth-child(3) {
+  background-color: #dd8f86;
+}
+
+/* cards inside a colored program section sit on cream */
+#photoshop .card,
+#illustrator .card,
+#indesign .card {
+  background-color: #faf7e4;
+}
+
+/* fourth card in "Which One to Use" */
+#choosing .card:nth-child(4) {
+  background-color: #f3efc3;
+}
+
+/* footer paragraph */
+footer p {
+  font-size: 1.05rem;
+}
+
+footer .ai-statement {
+  font-style: italic;
+  color: #4a463a;
+  margin-top: 6px;
+  max-width: 70ch;
+}
+
+/* tablet breakpoint */
+@media (min-width: 768px) {
+  header,
+  nav,
+  footer {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  section {
+    padding: 64px 8% 80px;
+  }
+
+  header {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  header h1 {
+    font-size: 5.5rem;
+  }
+
+  main h2 {
+    font-size: 4.5rem;
+  }
+
+  .screenshot {
+    margin-top: 40px;
+  }
+
+  .card-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .card {
+    flex: 1 1 240px;
+    padding: 28px 24px 30px;
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 1100px) {
+  header,
+  nav,
+  footer,
+  section {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  header h1 {
+    font-size: 7.5rem;
+  }
+
+  main h2 {
+    font-size: 5.5rem;
+  }
+
+  .card-row {
+    gap: 32px;
+  }
+
+  .card {
+    padding: 32px 28px 34px;
+  }
+}
