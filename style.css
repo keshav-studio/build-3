@@ -1,3 +1,6 @@
+/* fonts: Garamond for body, New Spirit (Adobe Fonts) for headings */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..600;1,400..600&display=swap");
+
 /* general */
 * {
   margin: 0;
@@ -7,7 +10,7 @@
 
 /* bodytype (mobile first: one column) */
 body {
-  font-family: Georgia, serif;
+  font-family: "EB Garamond", Garamond, Georgia, serif;
   font-size: 1.15rem;
   line-height: 1.5;
   color: #111111;
@@ -51,7 +54,7 @@ footer {
 
 /* headers */
 h1, h2, h3 {
-  font-family: serif;
+  font-family: new-spirit-condensed, serif;
   font-weight: 500;
   font-style: normal;
 }
